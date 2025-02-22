@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>!! 404 FORBIDDEN !!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+            overflow: hidden;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: url('https://i.giphy.com/HUK3gg6m0vAYw.webp') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(4px);
+        }
+
+        /* ERROR 404 */
+        .error-text {
+            font-size: 50px;
+            font-weight: bold;
+            color: red;
+            font-family: 'Creepster', cursive;
+            text-shadow: 3px 3px 10px black;
+            position: absolute;
+            top: 10%;
+            text-align: center;
+            width: 100%;
+            letter-spacing: 5px;
+            z-index: 2;
+        }
+
+        /* Frame Cyber Dark */
+        .frame {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 10px solid red;
+            box-shadow: 0 0 30px red inset;
+            z-index: 3;
+        }
+
+        /* Foto Bulat */
+        .hacker-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            border: 3px solid red;
+            box-shadow: 0 0 20px red;
+            object-fit: cover;
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Terminal */
+        .terminal-container {
+            width: 90%;
+            max-width: 500px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid red;
+            padding: 15px;
+            box-shadow: 0 0 15px red;
+            text-align: left;
+            font-size: 14px;
+            color: red;
+            font-family: 'Share Tech Mono', monospace;
+            margin-top: 15px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Logo Cyber & Police */
+        .logo-cyber, .logo-police {
+            position: absolute;
+            top: 5%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid red;
+            box-shadow: 0 0 10px red;
+            object-fit: cover;
+            z-index: 4;
+        }
+
+        .logo-cyber {
+            left: 5%;
+        }
+
+        .logo-police {
+            right: 5%;
+        }
+
+        /* Teks Kecil Hacker */
+        .hacker-text {
+            font-size: 12px;
+            color: yellow;
+            font-family: 'Share Tech Mono', monospace;
+            position: absolute;
+            bottom: 12%;
+            width: 100%;
+            text-align: center;
+            z-index: 2;
+        }
+
+        /* Efek Teks Berjalan */
+        .running-text {
+            position: absolute;
+            bottom: 5%;
+            width: 100%;
+            font-size: 14px;
+            color: red;
+            font-family: 'Share Tech Mono', monospace;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: runningText 10s linear infinite;
+        }
+
+        @keyframes runningText {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+
+        /* Efek GIF Glitch */
+        .glitch-gif {
+            position: absolute;
+            width: 120px;
+            height: auto;
+            opacity: 0;
+            z-index: 5;
+            transition: opacity 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <!-- Frame Cyber Dark -->
+    <div class="frame"></div>
+
+    <!-- Logo Cyber & Police di Pojok Kiri & Kanan -->
+    <img src="https://e7.pngegg.com/pngimages/47/489/png-clipart-blue-and-white-bhinneka-tunggal-ika-logo-indonesia-black-and-white-drawing-visual-arts-sketch-garuda-indonesia-logo-fictional-character.png" alt="Cyber Logo" class="logo-cyber">
+    <img src="https://t4.ftcdn.net/jpg/03/37/94/73/360_F_337947345_Bcd5UJwMgejs4Q0Ls2OgIL0IjJtMlXjm.jpg" alt="Police Logo" class="logo-police">
+
+    <!-- Teks 404 -->
+    <h1 class="error-text">404 FORBIDDEN</h1>
+
+    <!-- Foto Bulat GIF -->
+    <img src="https://i.giphy.com/1154CgmtPPa4lq.webp" class="hacker-img" alt="Hacker Avatar">
+
+    <div class="terminal-container">
+        <p>[root@darkweb]:~$ ERROR: TRASER OFFICIAL - YAN OFFICIAL</p>
+    </div>
+
+    <!-- Teks Kecil Hacker -->
+    <div class="hacker-text">
+        "Indonesia tidak butuh penanganan ketat yg bisanya cuma makan uang rakyat, kami sebagai cyber yg menahan ancaman negara lain sangat waspada kepada tikus tikus kantor! I'm Yan, tolak RU KUHP."
+    </div>
+
+    <!-- Teks Berjalan -->
+    <div class="running-text">
+        !! SYSTEM FAILURE - UNAUTHORIZED ACCESS DETECTED - CYBERSECURITY BREACH ALERT !!
+    </div>
+
+    <!-- GIF Glitch -->
+    <img src="https://i.giphy.com/YyKPbc5OOTSQE.webp" class="glitch-gif" id="glitchGif">
+
+    <script>
+        function showGlitch() {
+            let gif = document.getElementById('glitchGif');
+            let screenWidth = window.innerWidth;
+            let screenHeight = window.innerHeight;
+
+            let randomX = Math.random() * (screenWidth - 120);
+            let randomY = Math.random() * (screenHeight - 120);
+
+            gif.style.left = randomX + 'px';
+            gif.style.top = randomY + 'px';
+            gif.style.opacity = 1;
+
+            setTimeout(() => {
+                gif.style.opacity = 0;
+            }, 1000);
+        }
+
+        setInterval(showGlitch, 3000);
+    </script>
+</body>
+</html>
